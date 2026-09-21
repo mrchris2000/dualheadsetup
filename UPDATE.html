@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Changes</title>
+</head>
+<body>
+<p><h1>Changelog <i>(or the html-ification of <&NBSP> our code comments)</i></h1></p>
+<p>
+<ul>
+ Initial code: <B>0.01</B><br>
+ Mark Watson: 20/6/00	<br>																																																											And those Monkeys! ;-)<br>
+ <br>
+ Bug fixes/Change log:-<br>
+ <br>
+ Seigers: Sat Jul  8 01:57:22 GMT 2000  <B>0.01a</B><br>
+ -- Changed the radio buttons somewhat so easier expansion is possible.<br>
+ -- Fixed a minor problem with the initial settings not always being correct (was possible to turn on dual head 
+ mode in modes that didn't work with it - also now only acts as a mode changer for other cards (I think - does for
+ me).<br>
+ -- Added a 'firstRun' variable, used for initial setting up of things that don't need to be re-initialised after
+ every change - notably the radio buttons! Version 0.0.1b should also sort out the popup menus<br>
+ <br>
+ Seigers: Sun Jul  9 20:25:53 GMT 2000  <B>0.01b</B><br>
+ -- Broke the CreateMenus function to create seperation between GUI and functionality.<br>
+ -- Changed the Popup menus to more system compliant versions.<br>
+ -- Put the popup's into menu fields and added labels to each.<br>
+ -- Added the 'GRAY' constant... for setting the background of the MenuFields.<br>
+ -- Added a 'VERSION' identifier for keeping track of changes (a and b releases and such). The is printed to a console when started from one.<br>
+ -- Used the SetDivider function for working out the label and popup positions in the MenuField (lined up the popups nicely!)<br>
+ --->> Generally got angry at the lack of a well thought out ComboBox facility in the InterfaceKit (ARE YOU LISTENING Be ENGINEERS!!)<br>
+ <br>
+ Seigers: Mon Jul 10 00:46:48 GMT 2000  <B>0.01c</B><br>
+ -- Added a BMenuBar (in it's proper use Mark!), mainly so I could get some credit and have an 'AboutBox'<br>
+ -- Note some BRects have changed to accomodate the BMenuBar's new imposition...<br>
+ -- I also note that some of the BRects were not at the edges of the window... not sure if this was deliberate or not... changed them to something I like anyhow.<br>
+ -- Just realised... version b will never see the light of day now (forgot to mail it to Mark)... ah well.... on with the improvements!!!!<br>
+ -- GRRRRRRRRRRRRR!!!! I want a G400 so I can see if this is working or not! Pah! Hummm.... now what to add/re-write??<br>
+ -- Added a cancel option to the 'test' feature, always useful, don't say I never think of the clumsy prats out there... ;-)<br>
+ <br>
+ Seigers: Mon Jul 10 17:03:25 GMT 2000  <B>0.01d</B><br>
+ -- Sorted Marks virtual screen problem, changing res now doesn't mean that the BeMenu goes all over the place.<br>
+ -- Got a list of bugs/features from Mark... two of them are now done (one of them was in release 'b'!)<br>
+ --  Others are now nolonger applicable because of changes already made (WOO!)<br>
+ <br>
+ Seigers: Mon Jul 10 22:55:45 GMT 2000  <B>0.02a RC1</B><br>
+ -- Ok, only just got any of these versions tested on a G400, so some bugs have reared their ugly head. Seems as if the radioButton re-write broke their usefulness<br>
+ -- Fixed broken radioButtons (I hope). Would Mark take a look at lines marked in the constructor to tell me why he did that please...<br>
+ -- Added contact info to the about box and removed the version printing facility for commandline use - it's in the about box if needed!<br>
+<br>
+ Wato: Tues Jul 11 20:00 GMT 2000  <B>0.02aRC2</B><br>
+ -- Removed firstRun variable (all firstrun should be done in the constructor)<br>
+ -- Removed all currentMode references (other than in constructor and setting modes)<br>
+ <br>
+ Seigers: Wed Jul 12 13:16:27 BST 2000 <B> 0.02a</B><br>
+ -- Added one line of comment and then cried about my own stupidity at times... PAH!<br>
+ -- Then smiled after realising that this is now a release version!! Woo!!!!!!!!<br>
+ -- Oh and Mark I just realised... you re-badged your code in the RC2 directory but left the VERSION string as RC1!!! I'm nit picking because my code was crap and didn't do what it was supposed to.<br>
+<br>
+ Seigers: Thu Jul 13 00:42:40 BST 2000  <B>0.03aRC1</B><br>
+ -- Will upload the 0.02a Release today having finished the docs.<br>
+ -- Started work on 0.03a, the new features here are minimal - GUI enhancements, mainly me playing around learning the various API's. No harm in icing a cake though.<br>
+ -- First attempt at this gave an exe size of over 200K!!! Using more brain power I have cut it to 79K<br>
+ <br>
+ Seigers: Thu Jul 13 17:37:46 BST 2000  <B>0.03aRC2</B><br>
+ -- Just graduated today!!! I now have a shiny certificate that says I can put BEng HONS after my name... I'm impressed if your not.<br>
+ -- Cut the compiled EXE file size again... now 63K Better than 200K!<br>
+ -- I now need a way to re-size the frame on the fly... humm... I could kludge it with a 'for' loop for now... let's try it as a proof of concept.<br>
+ -- Am now somewhat inebriated, the rest of today's code will probably be removed tomorrow.... ah well t'was a fun night (11:17)<br>
+<br>
+ Seigers: Fri Jul 14 21:49:30 BST 2000  <B>0.03aRC3</B><br>
+ -- Further to lastnights rather drunken exploits I managed to write one line and that comment before collapsing into bed... (don't try this at home kiddies! ;-) ).<br>
+ -- On with the real work!!!!!!<br>
+ Fri Jul 14 23:19:17 BST 2000 -- Later that day...<br>
+ -- IT WORKS!!!! I have now got the helper views into the program such that if you can't follow the Docs on what each radiobutton means the views should be self explanitory.<br>
+ -- There has been talk of moving this over to a new codebase at some stage to get around some problems and try and cut file sizes etc... this will not be happening soon.<br>
+ -- The reason is that I have been given a new mandate... create a replacement for ScreenPrefs for dualhead G400 cards (by Wato). Therefor I have a whole bunch of features to add!<br>
+ -- Final testing of this will be done tonight and a release should be due sometime on Saturday. <br>
+ <br>
+ Seigers: Sat Jul 15 00:23:30 BST 2000  <B>0.03</B><br>
+ -- Ok!! It's tested, picked up one bug, and squashed it under my all powerful heal!!<br>
+ -- Updating documents now... done!<br>
+ -- Expect 0.03 sometime later today (after I sleep etc...)<br>
+ -- Got horribly confused by the version numbering system... from now on:<br>
+ 	<ul>-- Internal versions go up by letters.<br>
+ 	-- Potential release version get RC status (Internal swapping between myself and Wato).<br>
+ 	-- Release versions lose both the internal letters and RC number.<br></ul>
+ -- Should stop a few future headaches.<br>
+ <br>
+Rudolf Cornelissen: Thu Nov 10 2005  <B>0.04</B><br>
+ -- Added Video TVout modes support,<br>
+ -- Added primary/secondary TVout switch option support,<br>
+ -- Numerous bugfixes (added asking driver for confirmation/denial of support for some options in some places),<br>
+ -- Fixed 'hanging occuring sometimes' problem (don't delete menu's as they might be in the process of being drawn),<br>
+ -- Probably added some bugs of my own as well ;-)<br>
+ <br>
+</ul>
+</p>
+</body>

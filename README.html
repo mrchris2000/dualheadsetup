@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>Unofficial dualhead configuration utility for the unified Haiku Matrox and nVidia drivers</title>
+</head>
+<body>
+<p><h1>Dualhead setup utility - Distribution of X86 Binary including source</h1></p>
+<p>
+<i>Neither myself or FoFTDesign take any responsibility for damage caused to you or your hardware/software through use of this program.
+</i><br>
+<br>
+<a href="UPDATE.html">Updates from previous versions etc...</a>
+</p>
+<p><h3>Introduction</h3></p>
+<p>
+This is a tool to accompany the unified Haiku Matrox and nVidia drivers. If you find any problems please send a bug report to Rudolf: info.be-hold@inter.nl.net. It is a quick hack to replace the screen prefs and enable use of dual head modes. I am sure you can figure out how to use it, so won't insult your intelligence. However if you have problems, please feel free to e-mail me.
+</p>
+<p>The current version (0.04) of DualHeadSetup has been developed alongside/for Haiku Matrox driver 0.22 and Haiku nVidia driver 0.61. It will probably work OK with older versions of these drivers, but optimal comfort will be reached with the mentioned versions or higher.
+</p>
+<p>This application works with the modelines as exported by the driver in use, alongside some application internal modelines for various TVout modes: These internal modes adhere to the same logic as the modes from the driver do. No extra functionality for creating/modifying modelines is included in the application. This means you cannot set custom refreshrates (via a slider), and modes/refreshrates/colordepths are listed in the order as exported by the driver. If the application detects an 'unknown' mode following these rules, it will come up with a known default modesetting onscreen. You'll probably notice this mostly for refreshrate settings.
+</p>
+<br>
+<p><h3>Installation - Source version</h3></p>
+<p>
+<ul>
+<li>unzip DualHeadSetup_0.04.zip
+<li>cd DualHeadSetup_0.04
+<li>make
+<li>DualHeadSetup
+</ul>
+</p>
+<p><h3>Installation - Binary version</h3></p>
+<p>
+<ul>
+<li>Just doubleclick on the 'DualHeadSetup' file to use it. No actual installation is required.
+</ul>
+</p>
+<p><h2>Usage - Version 0.03a include helpful on-screen graphics to aid understanding.</h2>
+</p>
+<p>
+This program compements ScreenPrefs and adds the ability to do several things on graphics cards that support dualhead modes. 
+<br>
+<ul>
+<li>'Dual head' this uses both heads to give a larger overall viewport of the current screen (BeOS/Zeta/Haiku do not as yet support having two workspaces on seperate screens). 
+<br>
+<li>'Clone head' allows you to have the same screen image on both monitors.... useful for giving presentations where you want to control the screen from a small monitor and have it displayed on you 25 meter flat screen plasma uber screen.
+<br>
+<li>'Switch head' simply allows you to switch which monitor is displaying which head.
+<br>
+<li>'Single head' good ol' single headed loverlyness.... for those times when you can't be bothered with this dualhead mumbojumbo.
+</ul>
+</p>
+<p>
+<h2>Version 0.04:</h2>
+</p>
+<br>
+<p>
+<strong>Mode selecting logic.</strong><br>
+</p>
+Here's the logical order in which to select a new screenmode:
+<ul>
+<li>First select the output mode-type you want from the 'Output' menu if applicable;
+<li>Now select the resolution;
+<li>Select the refreshrate;
+<li>Select the colordepth;
+<li>Select a dualhead or the singlehead option if applicable;
+<li>Select TV output head from the 'TV head' menu if applicable;
+<li>Finally hit the 'Test', 'Use' or 'Save' button to activate the new mode.
+</ul>
+This order of setting a mode is built-in in the application. It's in the application, because graphics hardware features have certain boundaries that make this order of doing things logical.<br>
+</p>
+<br>
+<p><h3>More extensive TVout support.</h3>
+</p>
+<p>
+Menu 'Output':<br>
+<ul>
+<li>'Monitor' Is just as it was, with the exception of bug-fixes being in place. You'll notice more extensive and failsafe updating of all mode-related items.
+<li>'Desktop TV (PAL)' offers you PAL 640x480, 800x600 and 1024x768 'underscanning' modes (black borders on all sides of workspace on TV) depending on reported capabilities from the underlying graphics driver.
+<li>'Desktop TV (NTSC)' offers the same for the NTSC television standard.
+<li>'Video TV (PAL)' offers you PAL VCD (768x576) and DVD (720x576) 'overscanning' modes (TVscreen completely filled with video pixels being displayed without scaling (1:1)).
+<li>'Video TV (NTSC)' does the NTSC VCD (640x480) and DVD (720x480) 'overscanning' modes.
+<li>TV related selections are only accessible if your card and it's driver supports them.
+</ul>
+</p>
+<p>
+Menu 'TV head':<br>
+<ul>
+<li>is only visible when a TV output type is selected in the 'Output' menu.
+<li>is only accessible when a non-singlehead TVoutput mode is selected: otherwise it's set to 'Primary'. Unless the hardware can't do primary head TVout; then it's set to 'Secondary': you won't be able to activate TVout in this latter case: Set modes will only display on the VGA monitor.
+<li>In any TV-related dualhead mode, you can select:
+<ul>
+ <li>'Primary'. This will connect the TVout encoder to the primary head if the hardware supports it.
+ <li>'Secondary' will connect the TVout encoder to the secondary head if the hardware supports it.
+ </ul>
+</ul>
+</p>
+<p>
+<strong>Note please</strong> that the current relatively complicated solution exists only because BeOS/Zeta/Haiku do not support native dualhead modes at this time. Once they do the drivers will be rewritten to behave as 'completely' seperate drivers 'per head'. This will make the current 'custom' solution nolonger applicable.<br>
+<br>
+<br>
+Have fun!<br>
+<br>
+Rudolf.<br>
+</p>
+</body>
+</html>
